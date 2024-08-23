@@ -1,22 +1,38 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs 
-  labels:
-    app: nodejs
+  name: my-app
+  namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodejs
+      app: my-app
   template:
     metadata:
       labels:
-        app: nodejs
+        app: my-app
     spec:
       containers:
-      - name: nodejsapp
+      - name: my-app
         image: wilconsadocker/nodejs
         ports:
         - containerPort: 3000
+      imagePullSecrets:
+      - name: my-reg-cred
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-svc
+  namespace: default
+spec:
+  ports:
+    - name: http
+      port: 3000
+      targetPort: 30000
+  selector:
+    app: my-app
+
 
