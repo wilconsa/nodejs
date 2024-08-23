@@ -31,7 +31,8 @@ spec:
   ports:
     - name: http
       port: 3000
-      targetPort: 30000
+      targetPort: 3000
+      nodeport: 30000
   selector:
     app: my-app
 
