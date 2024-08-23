@@ -22,16 +22,18 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-svc
-  labels:
-    run: my-app
+  name: mi-servicio
 spec:
-  type: NodePort
-  ports:
-  - port: 3000
-    targetPort: 32100
-    protocol: TCP
-    name: http
   selector:
-    run: my-app
+    app: my-app
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 32100
+ #clusterIP: 10.0.171.239
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+      - ip: 192.168.1.38 
 
