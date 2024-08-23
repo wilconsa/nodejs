@@ -28,6 +28,7 @@ metadata:
   name: my-svc
   namespace: default
 spec:
+  type: NodePort
   ports:
     - name: http
       port: 3000
