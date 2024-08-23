@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: wilconsadocker/nodejs
+        image: wilconsadocker/nodejs:@@VERSION@@
         ports:
         - containerPort: 3000
 ---
