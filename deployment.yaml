@@ -30,5 +30,5 @@ spec:
   ports:
     - protocol: TCP
       port: 3000
-  externalTrafficPolicy: Local
+# externalTrafficPolicy: Local
       
