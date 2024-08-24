@@ -30,4 +30,4 @@ spec:
   ports:
     - protocol: TCP
       port: 3000
-      NodePor: 32100
+      NodePort: 32100
