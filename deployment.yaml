@@ -18,7 +18,7 @@ spec:
         image: wilconsadocker/nodejs:@@VERSION@@
         ports:
         - containerPort: 3000
-      nodeName: wnode2
+#      nodeName: wnode2
 ---
 apiVersion: v1
 kind: Service
