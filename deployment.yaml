@@ -31,5 +31,13 @@ spec:
   ports:
     - protocol: TCP
       port: 3000
+      targetPort: 3000
+      nodePort: 30006
+status:
+  loadBalancer:
+    ingress:
+    - ip: 192.168.1.38
+# externalTrafficPolicy: Local
+
 # externalTrafficPolicy: Local
       
